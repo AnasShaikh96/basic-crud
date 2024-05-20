@@ -1,27 +1,36 @@
 const mongoose = require('mongoose');
 
-const FootwearsModel = new Schema({
-  footwearType: {
+const FootwearsModel = new mongoose.Schema({
+  type: {
     type: String
   },
-  size: {
-    type: Number
+  material: {
+    type: String
   },
-  color: {
+  ocassion: {
     type: String
   },
   gender: {
     type: String
   },
+  color: {
+    type: String
+  },
   price: {
     type: Number
-  }
+  },
+  size: {
+    type: Number
+  },
 })
 
 
 module.exports = {
   initiliaze: (mongoose) => {
-    this.model = mongoose.model('footwears')
+    this.model = mongoose.model('footwear', FootwearsModel)
+  },
+  create: (data) => {
+    return this.model.create(data)
   }
 
 }

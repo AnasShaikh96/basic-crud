@@ -11,3 +11,13 @@ const footwear = {
   price: Number,
 
 }
+
+const footwear2 = {
+  type: 'shoes',
+  material: 'leather',
+  ocassion: 'ethnic',
+  gender: 'men',
+  color: 'Saddle Brown',
+  price: 2000,
+  size: 10,
+}
