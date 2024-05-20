@@ -27,10 +27,13 @@ const FootwearsModel = new mongoose.Schema({
 
 module.exports = {
   initiliaze: (mongoose) => {
-    this.model = mongoose.model('footwear', FootwearsModel)
+    return this.model = mongoose.model('footwear', FootwearsModel)
   },
   create: (data) => {
     return this.model.create(data)
+  },
+  getAll: (query) => {
+    return this.model.find()
   }
 
 }

@@ -1,6 +1,9 @@
 Project Plan
 
-Project is about a Leather Store.
+Project is about a Leather Store Inventory:
+A manager of the store should look at the data and get a report of how much incoming and outgoing of goods happened in a particular time period.
+
+
 
 Categories of Item includes:-
 1. Footwears

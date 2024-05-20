@@ -19,9 +19,28 @@ module.exports = {
 
       res.status(500).json({
         status: false,
-        data
+        error
       })
 
     }
+  },
+  getWholeInventory: async (req, res) => {
+
+    try {
+
+      const getData = await FootwearsModel.getAll()
+      res.status(200).json({
+        status: true,
+        getData
+      })
+
+    } catch (error) {
+      console.log(error)
+      res.status(500).json({
+        status: false,
+        error
+      })
+    }
+
   }
 }

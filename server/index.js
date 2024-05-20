@@ -8,15 +8,15 @@ app.use(express.urlencoded({ extended: true }))
 const mongoose = require('mongoose');
 const dbConfig = require('./config/database.config');
 
-const UserModel = require('./common/model/user/UserModel');
-const UserRoutes = require('./common/model/user/UserRoutes');
+const FootwearsModel = require('./common/model/footwears/FootwearsModel');
+const FootwearsRoutes = require('./common/model/footwears/FootwearsRoutes');
 
-// UserModel.initialize(mongoose)
+FootwearsModel.initiliaze(mongoose)
 
 mongoose.connect(dbConfig.url).then(() => {
   console.log('Database Connection Established')
 
-  // app.use('/user', UserRoutes)
+  app.use('/footwear', FootwearsRoutes)
 
 }).catch(() => {
 
