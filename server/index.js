@@ -11,12 +11,12 @@ const dbConfig = require('./config/database.config');
 const UserModel = require('./common/model/user/UserModel');
 const UserRoutes = require('./common/model/user/UserRoutes');
 
-UserModel.initialize(mongoose)
+// UserModel.initialize(mongoose)
 
 mongoose.connect(dbConfig.url).then(() => {
-  console.log('Connection Established')
+  console.log('Database Connection Established')
 
-  app.use('/user', UserRoutes)
+  // app.use('/user', UserRoutes)
 
 }).catch(() => {
 
