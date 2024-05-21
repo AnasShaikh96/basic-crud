@@ -22,6 +22,9 @@ const FootwearsModel = new mongoose.Schema({
   size: {
     type: Number
   },
+  status: {
+    type: 'unsold'
+  }
 })
 
 
@@ -32,7 +35,7 @@ module.exports = {
   create: (data) => {
     return this.model.create(data)
   },
-  getAll: (query) => {
+  getAll: () => {
     return this.model.find()
   }
 
